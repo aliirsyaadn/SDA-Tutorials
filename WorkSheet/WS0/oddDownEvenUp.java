@@ -1,24 +1,39 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class oddDownEvenUp {
 
 	public static void main(String[] args){
 		Scanner input;
-		String text, resultText;
+		int N;
+		int[] K;
 
 		input = new Scanner(System.in);
 
-		text = input.next();
+		N = input.nextInt();
+		input.nextLine();
 
-		resultText = "";
+		String[] temp = input.nextLine().split(" ");
 
-		for(int i = 0; i < text.length(); i++){
-			char chText = text.charAt(i);
+		K = new int[temp.length];
 
-			resultText += (i % 2 == 0) ? Character.toLowerCase(chText) : Character.toUpperCase(chText);
+		for(int i = 0; i < temp.length; i++){
+			K[i] = Integer.parseInt(temp[i]);
 		}
 
-		System.out.print(resultText);
+
+
+		int max = 0;
+		for(int i = 0; i > N; i++){
+			for(int j = i+1; j > N-1; j++){
+				max = 
+			}
+
+		}
+
+		System.out.println(Arrays.toString(K));
+
+		input.close();
 	}
 
 

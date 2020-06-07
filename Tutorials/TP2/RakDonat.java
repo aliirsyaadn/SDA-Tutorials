@@ -119,11 +119,29 @@ public class RakDonat{
         out.close();
     }
 
+    public static void insert(int data, ArrayList<Integer> sortedArr){
+        for(int i =0; i <= sortedArr.size() - 1; i ++){
+            if(sortedArr.get(i) >= data){
+                sortedArr.set(0, data);
+                break;
+            }else if(i == sortedArr.size() - 1){
+                sortedArr.add(data);
+            }
+        }
+    }
+
     /**
      * Method untuk add elemen sesuai parameter index yang berubah ke tempat yang benar 
      * pada sorted arraylist
      *  */ 
     public static void insertToArr(int index){
+        ArrayList<Integer> sortedArr = new ArrayList<>();
+        int data = in.nextInt();
+
+        insert(data, sortedArr);
+
+        
+
         LinkedList temp = listBaris.remove(index);
         int indexInsert = index;
 
